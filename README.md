@@ -125,6 +125,9 @@ first value returned is a flag that indicates if the frame was read correctly or
 frame on which we will be performing the detection.
 
 Having trouble? Feel free to reach me!
+
 LinkedIn💙 - https://www.linkedin.com/in/jayandhanr/
+
 Instagram❤️ - https://www.instagram.com/iamjayandhan/
+
 Twitter🌈 - https://twitter.com/iamjayandhan
