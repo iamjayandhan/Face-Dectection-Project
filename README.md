@@ -50,7 +50,6 @@ faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 for (x, y, w, h) in faces:
 cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
 
-
 ## Display the output
 
 cv2.imshow('img', img)
@@ -73,8 +72,6 @@ import cv2
 #Load the cascade
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
-
 
 #To capture video from webcam. 
 
@@ -126,3 +123,8 @@ The only difference here is that we use an infinite loop to loop through each fr
 The 
 first value returned is a flag that indicates if the frame was read correctly or not. We don’t need it. The second value returned is the still 
 frame on which we will be performing the detection.
+
+Having trouble? Feel free to reach me!
+LinkedIn💙 - https://www.linkedin.com/in/jayandhanr/
+Instagram❤️ - https://www.instagram.com/iamjayandhan/
+Twitter🌈 - https://twitter.com/iamjayandhan
