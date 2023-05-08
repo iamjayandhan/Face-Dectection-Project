@@ -2,7 +2,7 @@
 
 easy way of detecting faces using Haar cascades in OpenCV and Python.
 
-#Project Guide
+# Project Guide
 This project requires python package "opencv".
 
 You can install it using pip:
@@ -16,22 +16,22 @@ Download from here(OFFICIAL):
 Raw format - https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml
 xml file - https://github.com/opencv/opencv/tree/master/data/haarcascades
 
-##To detect faces in images:
+## To detect faces in images:
 file name : detect_face.py
 
 import cv2
-# Load the cascade
+#Load the cascade
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-# Read the input image
+#Read the input image
 img = cv2.imread('test.jpg')
-# Convert into grayscale
+#Convert into grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-# Detect faces
+#Detect faces
 faces = face_cascade.detectMultiScale(gray, 1.1, 4)
-# Draw rectangle around the faces
+#Draw rectangle around the faces
 for (x, y, w, h) in faces:
     cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-# Display the output
+#Display the output
 cv2.imshow('img', img)
 cv2.waitKey()
 
@@ -52,28 +52,28 @@ import cv2
 # Load the cascade
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-# To capture video from webcam. 
+#To capture video from webcam. 
 cap = cv2.VideoCapture(0)
-# To use a video file as input 
-# cap = cv2.VideoCapture('filename.mp4')
+#To use a video file as input 
+#cap = cv2.VideoCapture('filename.mp4')
 
 while True:
-    # Read the frame
+    #Read the frame
     _, img = cap.read()
-    # Convert to grayscale
+    #Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    # Detect the faces
+    #Detect the faces
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)
-    # Draw the rectangle around each face
+    #Draw the rectangle around each face
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-    # Display
+    #Display
     cv2.imshow('img', img)
-    # Stop if escape key is pressed
+    #Stop if escape key is pressed
     k = cv2.waitKey(30) & 0xff
     if k==27:
         break
-# Release the VideoCapture object
+#Release the VideoCapture object
 cap.release()
 
 The only difference here is that we use an infinite loop to loop through each frame in the video. We use cap.read() to read each frame. The first value returned is a flag that indicates if the frame was read correctly or not. We don’t need it. The second value returned is the still frame on which we will be performing the detection.
