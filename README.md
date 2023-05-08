@@ -6,6 +6,7 @@ easy way of detecting faces using Haar cascades in OpenCV and Python.
 This project requires python package "opencv".
 
 You can install it using pip:
+
 pip install opencv-python
 
 Face detection using Haar cascades is a machine learning based approach where a cascade function is trained with a set of input data. OpenCV already contains many pre-trained classifiers for face, eyes, smiles, etc.. here we use face classifier. You can experiment with other classifiers as well.
@@ -13,7 +14,9 @@ Face detection using Haar cascades is a machine learning based approach where a 
 You need to download the trained classifier XML file (haarcascade_frontalface_default.xml), which is available in OpenCv’s GitHub repository. Save it to your working location.
 
 Download from here(OFFICIAL):
+
 Raw format - https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml
+
 xml file - https://github.com/opencv/opencv/tree/master/data/haarcascades
 
 ## To detect faces in images:
